@@ -10,4 +10,5 @@ int main(void)
 	printf("inum 크기 : %d\n", sizeof(inum));
 	printf("num 크기 : %d\n", sizeof(num));
 
+
 }
