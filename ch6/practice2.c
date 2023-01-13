@@ -10,7 +10,8 @@ int main(void)
 	/*
 	1. float / double / long double의 입력(scanf)에서 서식문자 : %f, %lf, %Lf
 	2. float / double / long double의 출력(printf)에서 서식문자 : %f, %f, %Lf
-	3. 문자열의 경우 입,출력 모두 %s 사용
+
+	3. 문자열의 경우 입,출력 모두 %s 사용 ( %c 는 char 형 변수를 지정한 뒤 사용해야 하는 점에서 차이 )
 	*/
 	return 0;
 }
