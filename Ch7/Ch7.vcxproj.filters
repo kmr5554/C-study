@@ -27,5 +27,11 @@
     <ClCompile Include="practice2.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Ch7example3.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch7example4.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
