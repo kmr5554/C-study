@@ -21,12 +21,15 @@ int main(void)
 
 	// 8-2 (2)
 	int A, Z;
-	for (A = 1; A < 10; A++)
+	for (A = 0; A < 10; A++)
 	{
-		for (Z = 1; Z < 10; Z++)
+		for (Z = 0; Z < 10; Z++)
 		{
+			if A == Z
+				continue;
 			if (11 * (A + Z) == 99)
 				printf("A = %d, Z= %d, %d%d + %d%d = 99\n", A, Z, A, Z, Z, A);
 		}
 	}
+	return 0;
 }

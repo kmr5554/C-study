@@ -28,17 +28,14 @@ int main(void)
 	avg = (K + E + M) / 3;
 	printf("avg = %f\n", avg);
 
-	if (avg >= 50)
-		if (avg >= 70)
-			if (avg >= 80)
-				if (avg >= 90)
-					score = 'A';
-				else
-					score = 'B';
-			else
-				score = 'C';
-		else
-			score = 'D';
+	if (avg >= 90)
+		score = 'A';
+	else if (avg >= 80)
+		score = 'B';
+	else if (avg >= 70)
+		score = 'C';
+	else if (avg >= 50)
+		score = 'D';
 	else
 		score = 'F';
 	printf("score = %c\n\n", score);
@@ -52,10 +49,5 @@ int main(void)
 	result1 = num5 >= num6 ? num5 - num6 : num6 - num5;
 	printf("result = %d\n\n", result1);
 	
-		
-
-
-
-	
-
+	return 0;
 }
