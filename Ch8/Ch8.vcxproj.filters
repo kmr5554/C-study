@@ -21,5 +21,11 @@
     <ClCompile Include="Ch8example1.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="practice2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch8example2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
