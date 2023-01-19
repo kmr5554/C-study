@@ -20,9 +20,10 @@ int Add2(int val2)
 
 void SimpleFunc(void)
 {
-	static int num3 = 0;
+	static int num3 = 0;		//static 선언된 지역변수 특징 : 1. 선언된 함수 내에서만 접근 (지역변수)  / 2. 함수 종료되어도 초기화 X (전역변수)
 	int num4 = 0;
-	num3++, num4++;
+	num3++, num4++;				// num3는 static이므로 함수 종료하거나 반복하더라도 다시 0으로 초기화되지 않으며 23행의 num3 = 0이 무시됨 
+								// num4는 함수 끝나면 다시 0으로 초기화
 	printf("static : %d , local : %d\n", num3, num4);
 }
 
