@@ -4,6 +4,8 @@ void convert16num(void);
 void print구구단(void);
 void purchase(void);
 
+// 2,3번 수정했음
+
 int main(void)
 {
 	// 10-1번 문제
@@ -35,8 +37,8 @@ void print구구단(void)
 	int i,j;
 	printf(" ?단 : "), scanf("%d %d", &num1, &num2);
 	if (num1 <= num2)
-		first = num1, second = num2;
-	else
+		first = num1, second = num2;		// num3 만들고 if (num1>num2)
+	else									//				  num3=num1, num1=num2, num2=num3; 써도됨
 		first = num2, second = num1;
 	
 	for (i = first; i <= second; i++)
@@ -57,15 +59,15 @@ int findGCD(void)
 
 	printf("2개 정수 : "), scanf("%d %d", &num1, &num2);
 	
-	for (i = 1; i <= num1; i++)
+	for (i = num1; i >= 1; i--)		// i를 감소시키는 방향으로 가는게 더 적합
 	{
-		if (num1 % i != 0)
-			continue;
-		else
-			if (num2 % i == 0)
-				GCD = i;
+		if (num1 % i == 0 & num2 % i == 0)
+		{
+			GCD = i;
+			break;
+		}
 	}
-	printf("GCD : %d\n", GCD);
+	printf("GCD : %d\n\n", GCD);
 	return GCD;
 }
 

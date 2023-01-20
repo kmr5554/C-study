@@ -5,6 +5,7 @@ void PrintTime(int);
 void Solve_K(int, int);
 int Recur_P(int);
 
+// 5번 수정, 7번 다시 품
 
 int main(void)
 {
@@ -33,23 +34,18 @@ int main(void)
 void PrimeNumber(void)
 {
 	int i, j;
-	int PN = 1;
+	int count = 1;
 
-	printf("2 ");
-
-	for (i = 3; PN <= 9; i++)
+	for (i = 1; count <= 10; i++)
 	{
-		int num = 1;
-		for (j = 2; j < i; j++)
+		int num = 0;
+		for (j = 1; j <= i; j++)
 		{
 			if (i % j == 0)
-			{
 				num++;
-				break;
-			}
 		}
-		if (num == 1)
-			printf("%d ", i), PN++;
+		if (num == 2)
+			printf("%d ", i), count++;
 	}
 }
 
@@ -58,29 +54,22 @@ void PrintTime(int num)
 	int h, m, s;
 	h = num / 3600;
 	m = (num - h * 3600) / 60;
-	s = num - h * 3600 - m * 60;
+	s = (num - h * 3600- m * 60);
 	printf("hours : %d , minutes : %d , seconds : %d \n", h, m, s);
 }
 
-int power(int num, int pow)
-{
-	int i, POWER=1;
-
-	for (i = 1; i <= pow; i++)
-		POWER*=num;
-	return POWER;
-}
 void Solve_K(int num, int n)
 {
-	int k, result=1;
-	for (k=0;result<n ;k++)
+	int k=0, result=1;
+	while(1)
 	{
 		if (num > n)
 			break;
-		result = power(num, k+1);
+		result *= num;
+		if (result > n)
+			break;
+		k++;
 	}
-	if (result != n)
-		k = k - 1;
 	printf("공식 만족하는 최대 k : %d\n\n", k);
 }
 
@@ -92,3 +81,15 @@ int Recur_P(int num)
 		return 2 * Recur_P(num - 1);
 }
 
+/* 8번 다른 답 !!!!!!!!!
+
+int Recur_P(int num)
+{
+	static int y=1;
+	if (num==0)
+		return y;
+	else
+		y*=2
+		Recur_P(num-1)
+}
+*/
