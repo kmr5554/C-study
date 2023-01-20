@@ -3,6 +3,8 @@
 void PrimeNumber(void);
 void PrintTime(int);
 void Solve_K(int, int);
+int Recur_P(int);
+
 
 int main(void)
 {
@@ -19,7 +21,13 @@ int main(void)
 	int num, n;
 	printf("밑, n 입력 : "), scanf("%d %d", &num, &n);
 	Solve_K(num,n);
+	
+	// 10-8번 문제
+	int n_power;
+	printf("power n of 2 : "), scanf("%d", &n_power);
+	printf("2의 %d승 : %d\n", n_power, Recur_P(n_power));
 	return 0;
+
 }
 
 void PrimeNumber(void)
@@ -56,19 +64,31 @@ void PrintTime(int num)
 
 int power(int num, int pow)
 {
-	int i, result=1;
-	if (pow == 0)
-		return 1;
+	int i, POWER=1;
+
 	for (i = 1; i <= pow; i++)
-		result*=num;
-	return result;
+		POWER*=num;
+	return POWER;
 }
 void Solve_K(int num, int n)
 {
-	int k=0, result=1;
+	int k, result=1;
 	for (k=0;result<n ;k++)
 	{
+		if (num > n)
+			break;
 		result = power(num, k+1);
 	}
-	printf("공식 만족하는 최대 k : %d", k);
+	if (result != n)
+		k = k - 1;
+	printf("공식 만족하는 최대 k : %d\n\n", k);
 }
+
+int Recur_P(int num)
+{
+	if (num == 0)
+		return 1;
+	else
+		return 2 * Recur_P(num - 1);
+}
+
