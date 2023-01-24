@@ -25,7 +25,7 @@ void ReadString(void)
 	while (str3[idx] != '\0')
 	{
 		printf("%c", str3[idx]);
-		idx++;
+		idx++
 	}
 }
 
