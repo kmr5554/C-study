@@ -29,7 +29,7 @@ void ex2(void)
 	printf("%p %p %p\n", strArr[0], strArr[1], strArr[2]);
 	printf("%s %s %s\n\n", strArr[0], strArr[1], strArr[2]);
 
-
+	// printf의 %s는 주소 내의 string을 불러오는 기능이 있지만 %d는 그런 기능이 없어서 인자 앞에 "*"를 붙여 불러오도록 해야함  
 }
 
 int main(void)
