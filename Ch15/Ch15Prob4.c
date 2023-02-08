@@ -16,7 +16,7 @@ void Palindrome(char param[], int len)
 	if (a == 1)
 		printf("회문 입니다.\n");
 	if (a != 1)
-		printf("회문이 아닙니다.\n")
+		printf("회문이 아닙니다.\n");
 }
 
 int main(void)
