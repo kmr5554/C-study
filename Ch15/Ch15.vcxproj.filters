@@ -27,5 +27,8 @@
     <ClCompile Include="Ch15Prob4.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Ch15Prob5.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
