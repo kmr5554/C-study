@@ -33,9 +33,37 @@ void Prob2(int ary1[][4], int ary2[][2])
 
 }
 
-void Prob3(void)
+void Prob3(int ary[5][5])
 {
+	int a, b;
+	int person_score;
+	int subj_score;
+	for (a = 0; a < 4; a++)
+	{
+		person_score = 0;
+		for (b = 0; b < 4; b++)
+		{
+			person_score += ary[a][b];
+		}
+		ary[a][4] = person_score;
+	}
 
+	for (b = 0; b < 5; b++)
+	{
+		subj_score = 0;
+		for (a = 0; a < 4; a++)
+		{
+			subj_score += ary[a][b];
+		}
+		ary[4][b] = subj_score;
+	}
+
+	for (a = 0; a < 5; a++)
+	{
+		for (b = 0; b < 5; b++)
+			printf("%d ", ary[a][b]);
+		printf("\n");
+	}
 }
 
 
@@ -59,6 +87,9 @@ int main(void)
 	for (i = 0; i < 4; i++)
 	{
 		for (j = 0; j < 4; j++)
-			printf("%s 점수 ( %s ) : ", name[i], subj[j]), scanf("%d", &arr3[i][j]);
+			printf("%s의 점수( %s )는? : ", name[i], subj[j]), scanf("%d", &arr3[i][j]);
+		printf("\n");	
 	}
+
+	Prob3(arr3);
 }
