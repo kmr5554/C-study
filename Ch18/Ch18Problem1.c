@@ -28,10 +28,44 @@ void Prob2(void)
 
 	SimpleFuncOne(arr1, arr2);
 	SimpleFuncTwo(arr3, arr4);
+	printf("\n\n");
+}
+
+void SimpleFunc3(int **ary, int *(*ary2)[5])
+{
+	printf("硅凯 林家 : %p, %p\n", ary, ary2);
+}
+
+void SimpleFunc4(int ***ary, int***(*ary2)[5])
+{
+	printf("硅凯 林家 : %p, %p", ary, ary2);
+}
+
+void Prob3(void)
+{
+	int* arr1[3];
+	int* arr2[3][5];
+	int** arr3[5];
+	int*** arr4[3][5];
+
+	SimpleFunc3(arr1, arr2);
+	SimpleFunc4(arr3, arr4);
+	printf("\n\n");
+}
+
+void Prob5(void)
+{
+	int arr[2][2][2] = { 1,2,3,4,5,6,7,8 };
+	printf("%d\n\n", arr[1][0][1]);
+	printf("%d %d %d %d %d",
+		(*(arr+1))[0][1],  (*(*(arr+1)+0))[1],  *(*(*(arr+1)+0)+1),  
+		(*(arr[1]+0))[1],  (*(*(arr+1)[0])+1)          );
 }
 
 int main(void)
 {
 	Prob1();
 	Prob2();
+	Prob3();
+	Prob5();
 }
