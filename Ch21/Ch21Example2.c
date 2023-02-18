@@ -17,6 +17,7 @@ int main(void)
 	}
 
 	// example 결과 : 사용자는 한번 입력했으나 fgets는 남아있는 문자들을 읽으며 여러 번 반복됨.
+	//				  또한 fgets는 엔터키(\n)도 문자로 받아들이므로 문자열 내의 null(\n)과 printf내의 \n이 두번 실행되었음.
 
 	return 0;
 }
