@@ -18,7 +18,9 @@ int main(void)
 	
 	// example 결과 : 사용자는 한번 입력했으나 fgets는 남아있는 문자들을 읽으며 여러 번 반복됨.
 	//				  또한 fgets는 엔터키(\n)도 문자로 받아들이므로 문자열 내의 null(\n)과 printf내의 \n이 두번 실행되었음.
-	while (getchar() != '\n');
+	
+	
+	while (getchar() != '\n');	// 개행 문자 나올때까지 입력버퍼 문자를 읽어서 버퍼를 비움
 
 
 	char str1[20];
@@ -29,18 +31,21 @@ int main(void)
 	fgets(str1, sizeof(str1), stdin);
 	printf("2번 입력 : ");
 	fgets(str2, sizeof(str2), stdin);
+
 	while (str1[j] != '\n')
 	{
 		printf("%c %d\n", str1[j],j);
 		j++;
 	}
+
 	int ag1, ag2;
-	ag1 = atoi(&str1[2]);
+	ag1 = atoi(&str1[2]);	// 문자열 -> int형 바꿈,    parameter에 해당하는 문자열의 시작 주소부터 이후 내용들을 바꿔줌
 	ag2 = atoi(&str2[2]);
 
 	if (ag1 == ag2)
 		printf("same");
 	else
 		printf("diff");
+
 	return 0;
 }
