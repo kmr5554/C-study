@@ -9,7 +9,7 @@ typedef struct point Point;
 
 // 2가지 방법으로 "struct point" 표현을 축약 가능
 
-typedef struct point2
+typedef struct point2		// 이 때 point2는 실제로 의미가 없으므로 생략해도 됨.
 {
 	int xpos;
 	int ypos;
