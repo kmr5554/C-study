@@ -18,7 +18,10 @@
     <ClCompile Include="Ch23Example1.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Ch23Example2.c">
+    <ClCompile Include="Ch23Problem1.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch23Example3.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
