@@ -11,7 +11,6 @@ int main(void)
 {
 	UBox ubx;
 
-
 	ubx.mem3 = 7.5;
 	printf("%lf\n", ubx.mem1);
 	printf("%lf\n", ubx.mem2);
